@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <h2 class="text-center">Login</h2>
+                <!-- Display error message if present -->
+                <div th:if="${param.error}" class="alert alert-danger" role="alert">
+                    Nome de usuário ou senha incorretos.
+                </div>
+                <!-- Display registration success message if present -->
+                <div th:if="${param.logout}" class="alert alert-success" role="alert">
+                    Você foi desconectado com sucesso.
+                </div>
+                <form action="/login" method="post">
+                    <div class="form-group">
+                        <label for="username">Usuário:</label>
+                        <input type="text" id="username" name="username" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                </form>
+                <hr>
+                <p class="text-center">Ou <a href="/oauth2/authorization/google" class="btn btn-outline-primary btn-block">Login com Google</a></p>
+                <p class="text-center">Não tem uma conta? <a href="/register">Cadastre-se aqui</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
