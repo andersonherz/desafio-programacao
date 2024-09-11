@@ -11,7 +11,7 @@ Obs.: por padrão foi utlizado o banco de dados H2 que roda em memória, e para 
 O serviço estará disponível em **http://localhost:8080** e para acessá-lo temos as seguintes opções:
 
 1. Criar um novo usuário, e após utilizar os dados(usuario e senha) para fazer o login.
-1. Se autenticar usando uma conta Google(**Importante: Irá funcionar somente se foi seguido o passo **)
+1. Se autenticar usando uma conta Google(**Importante: Irá funcionar somente se foi seguido o passo: Informar os valores para GOOGLE_CLIENT_ID e GOOGLE_CLIENT_SECRET**)
 
 
 # Descrição do projeto
